@@ -50,9 +50,8 @@ async function main() {
       result = NaN;
       break;
   }
-  console.log(chalk.bgBlack.redBright.bold.underline(`Result of ${operation}: ${result}`)); 
+  console.log(chalk.bgBlack.redBright.bold.underline(`Result of ${operation} is: ${result}`)); 
 }
 
-main(); // Call the main function to start the program
-
+main(); 
 
