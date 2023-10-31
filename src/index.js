@@ -36,7 +36,7 @@ const promptTodo = async () => {
         });
     }
     else {
-        console.log(chalk.yellow.bold('\nNo todos found.\n'));
+        console.log(chalk.yellow.bold('\nNo todos found yet .\n'));
     }
 };
 promptTodo();

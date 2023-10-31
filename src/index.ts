@@ -4,6 +4,8 @@ import chalk from "chalk"
 const todos : string[]= [];
 let loop = true;
 
+
+
 const promptTodo = async () => {
     console.log(chalk.yellow.bold('\nWelcome to your Todo List!\n'));
 
@@ -40,7 +42,7 @@ const promptTodo = async () => {
             console.log(chalk.blue.bold(`${index + 1}. ${todo}`));
         });
     } else {
-        console.log(chalk.yellow.bold('\nNo todos found.\n'));
+        console.log(chalk.yellow.bold('\nNo todos found yet .\n'));
     }
 };
 
