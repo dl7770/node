@@ -29,7 +29,7 @@ var Student = /** @class */ (function () {
     };
     return Student;
 }());
-// Example usage:
+
 var student = new Student("Dua", "Latif");
 student.enroll("Mathematics");
 student.enroll("Economics");
