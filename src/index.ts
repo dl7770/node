@@ -1,26 +1,50 @@
-import chalk from "chalk"
-import inquirer from "inquirer";
+class Student {
+    firstName: string;
+    lastName: string;
+    studentID: string;
+    courses: string[];
+    balance: number;
 
-const systemGeneratedNo = Math.floor(Math.random() * 10) + 1; 
-
-
-inquirer
-  .prompt([
-    {
-      type: "number",
-      name: "userGuess",
-      message: " Greetings!! Write your guess between 1 to 10: ",
-    },
-  ])
-  .then((answers) => {
-    const userGuess = answers.userGuess;
-    console.log(userGuess, "userGuess", systemGeneratedNo, "SYs");
-
-    if (userGuess === systemGeneratedNo) {
-      console.log(" Congrats your answer is correct \n You Win!");
-    } else {
-      console.log("Please try again Better luck next time!");
+    constructor(firstName: string, lastName: string) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.studentID = this.generateStudentID();
+        this.courses = [];
+        this.balance = 0;
     }
-  })
-  
-  ;
+
+    private generateStudentID(): string {
+        return Math.floor(10000 + Math.random() * 90000).toString();
+    }
+
+    enroll(course: string): void {
+        this.courses.push(course);
+    }
+
+    viewBalance(): void {
+        console.log(`Balance: $${this.balance}`);
+    }
+
+    payTuition(amount: number): void {
+        this.balance -= amount;
+        console.log(`Thank you for your payment of $${amount}`);
+        this.viewBalance();
+    }
+
+    showStatus(): void {
+        console.log(`Name: ${this.firstName} ${this.lastName}`);
+        console.log(`Student ID: ${this.studentID}`);
+        console.log("Courses Enrolled:");
+        this.courses.forEach(course => console.log(course));
+        this.viewBalance();
+    }
+}
+
+
+const student = new Student("Dua", "Latif");
+student.enroll("Mathematics");
+student.enroll("Economics");
+student.viewBalance();
+student.payTuition(1000);
+student.showStatus();
+
