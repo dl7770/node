@@ -1,7 +1,7 @@
 
 import inquirer from "inquirer";
 import chalk from "chalk"
-const todos : string[ ]= [];
+const todos : string[]= [];
 let loop = true;
 
 const promptTodo = async () => {
