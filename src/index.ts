@@ -1,7 +1,6 @@
-const inquirer = require('inquirer');
-const chalk = require('chalk');
-
-const todos : string[]= [];
+import inquirer from "inquirer";
+import chalk from "chalk"
+const todos : string[ ]= [];
 let loop = true;
 
 const promptTodo = async () => {
