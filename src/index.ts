@@ -1,3 +1,4 @@
+
 import inquirer from "inquirer";
 import chalk from "chalk"
 const todos : string[ ]= [];
@@ -44,4 +45,3 @@ const promptTodo = async () => {
 };
 
 promptTodo();
-

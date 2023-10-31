@@ -1,5 +1,5 @@
 import inquirer from "inquirer";
-import chalk from "chalk"
+import chalk from "chalk";
 const todos = [];
 let loop = true;
 const promptTodo = async () => {
@@ -40,4 +40,3 @@ const promptTodo = async () => {
     }
 };
 promptTodo();
-export {};
