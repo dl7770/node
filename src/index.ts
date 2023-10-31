@@ -15,7 +15,7 @@ const promptTodo = async () => {
                 message: 'What do you want to add in your todo?'
             },
             {
-                type: 'confirm',
+              type: 'confirm',
                 name: 'addmore',
                 message: 'Do you want to add more todo?',
                 default: false
